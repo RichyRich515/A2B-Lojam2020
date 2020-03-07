@@ -16,3 +16,4 @@ func _ready():
 func _on_LavaArea2D_body_entered(body):
 	if body.name == "Player":
 		body.position = body.initialPosition
+		body.getHurt()
