@@ -11,10 +11,19 @@ export(float) var gravity = 10.0
 var jumping = false
 
 var keys = []
-
+var isHurt = false
 
 func _ready():
 	pass
+	
+	
+func _process(delta):
+	if $Timer.time_left == 0:
+		isHurt = false
+	if isHurt:
+		$AnimatedSprite.self_modulate = Color(0.8,0,0)
+	else:
+		$AnimatedSprite.self_modulate = Color(1,1,1)		
 
 
 func _physics_process(delta):
@@ -45,3 +54,7 @@ func remove_key(color):
 		return true
 	else:
 		return false
+		
+func getHurt():
+	isHurt = true
+	$Timer.start()
