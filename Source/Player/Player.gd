@@ -9,11 +9,14 @@ export(float) var acceleration = 50.0
 export(float) var gravity = 10.0
 
 var jumping = false
+var initialPosition
 
 var keys = []
 var isHurt = false
+var shakeDir = 1
 
 func _ready():
+	initialPosition = position
 	pass
 	
 	
@@ -22,7 +25,13 @@ func _process(delta):
 		isHurt = false
 	if isHurt:
 		$AnimatedSprite.self_modulate = Color(0.8,0,0)
+		$Camera2D.offset.x += shakeDir * 200 * delta
+		if $Camera2D.offset.x > 3.5:
+			shakeDir = -1
+		if $Camera2D.offset.x < -3.5:
+			shakeDir = 1
 	else:
+		$Camera2D.offset.x = 0
 		$AnimatedSprite.self_modulate = Color(1,1,1)		
 
 
