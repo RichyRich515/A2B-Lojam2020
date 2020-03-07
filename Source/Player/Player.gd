@@ -10,11 +10,12 @@ export(float) var gravity = 10.0
 
 var jumping = false
 
+var keys = []
 
 
 func _ready():
-	
 	pass
+
 
 func _physics_process(delta):
 	motion.y += gravity
@@ -32,3 +33,15 @@ func _physics_process(delta):
 		motion.y = -jump_power
 	
 	motion = move_and_slide(motion, Vector2(0.0, -1.0))
+
+
+func get_key(color):
+	keys.append(color)
+
+
+func remove_key(color):
+	if color in keys:
+		keys.remove(color)
+		return true
+	else:
+		return false
