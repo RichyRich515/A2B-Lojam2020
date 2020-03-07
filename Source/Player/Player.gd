@@ -25,7 +25,7 @@ func _process(delta):
 		isHurt = false
 	if isHurt:
 		$AnimatedSprite.self_modulate = Color(0.8,0,0)
-		$Camera2D.offset.x += shakeDir * 300 * delta
+		$Camera2D.offset.x += shakeDir * 200 * delta
 		if $Camera2D.offset.x > 3.5:
 			shakeDir = -1
 		if $Camera2D.offset.x < -3.5:
