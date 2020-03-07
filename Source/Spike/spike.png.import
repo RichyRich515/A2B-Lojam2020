@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/inverted_grey_bricks.png-ddb9bca5e4895bce888a03a6b261bb58.stex"
+path="res://.import/spike.png-c39e712aa739fe6515b078ad2d43cf15.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://inverted_grey_bricks.png"
-dest_files=[ "res://.import/inverted_grey_bricks.png-ddb9bca5e4895bce888a03a6b261bb58.stex" ]
+source_file="res://Spike/spike.png"
+dest_files=[ "res://.import/spike.png-c39e712aa739fe6515b078ad2d43cf15.stex" ]
 
 [params]
 
