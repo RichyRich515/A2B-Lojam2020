@@ -9,11 +9,13 @@ export(float) var acceleration = 50.0
 export(float) var gravity = 10.0
 
 var jumping = false
+var initialPosition
 
 var keys = []
 var isHurt = false
 
 func _ready():
+	initialPosition = position
 	pass
 	
 	
