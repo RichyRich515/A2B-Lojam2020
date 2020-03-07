@@ -32,3 +32,7 @@ limit_left = 0
 limit_top = 0
 limit_smoothed = true
 smoothing_enabled = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
