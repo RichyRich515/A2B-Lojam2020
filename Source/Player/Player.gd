@@ -15,15 +15,15 @@ var isHurt = false
 
 func _ready():
 	pass
-	
-	
+
+
 func _process(delta):
 	if $Timer.time_left == 0:
 		isHurt = false
 	if isHurt:
 		$AnimatedSprite.self_modulate = Color(0.8,0,0)
 	else:
-		$AnimatedSprite.self_modulate = Color(1,1,1)		
+		$AnimatedSprite.self_modulate = Color(1,1,1)
 
 
 func _physics_process(delta):
@@ -40,21 +40,31 @@ func _physics_process(delta):
 	
 	if on_floor and Input.is_action_just_pressed("jump"):
 		motion.y = -jump_power
+		jumping = true
+		$Sounds/Jump.play()
+	elif on_floor and jumping:
+		jumping = false
+		$Sounds/Land.play()
+	 
 	
 	motion = move_and_slide(motion, Vector2(0.0, -1.0))
 
 
 func get_key(color):
 	keys.append(color)
+	$"Sounds/Key Pickup".play()
 
 
 func remove_key(color):
 	if color in keys:
 		keys.remove(color)
+		$"Sounds/Door Open".play()
 		return true
 	else:
 		return false
-		
+
+
 func getHurt():
 	isHurt = true
+	$Sounds/Hit.play()
 	$Timer.start()

@@ -1,7 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/player.png" type="Texture" id=2]
+[ext_resource path="res://Player/Jump.wav" type="AudioStream" id=3]
+[ext_resource path="res://Player/Land.wav" type="AudioStream" id=4]
+[ext_resource path="res://Player/Hit_Hurt.wav" type="AudioStream" id=5]
+[ext_resource path="res://Player/Key Pickup.wav" type="AudioStream" id=6]
+[ext_resource path="res://Player/Door_Open.wav" type="AudioStream" id=7]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -36,3 +41,20 @@ smoothing_enabled = true
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.2
 one_shot = true
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="Jump" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource( 3 )
+
+[node name="Land" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource( 4 )
+
+[node name="Hit" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource( 5 )
+
+[node name="Key Pickup" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource( 6 )
+
+[node name="Door Open" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource( 7 )
