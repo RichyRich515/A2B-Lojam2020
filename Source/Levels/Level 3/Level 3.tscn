@@ -40,7 +40,7 @@ position = Vector2( 127.844, 174.588 )
 
 [node name="LevelTransition" parent="." instance=ExtResource( 5 )]
 position = Vector2( 560, 176 )
-next_level = "res://Levels/Level 3/Level 3.tscn"
+next_level = "res://Levels/Level 4/Level 4.tscn"
 
 [node name="Locked Door" parent="." instance=ExtResource( 6 )]
 position = Vector2( 336, 176 )
