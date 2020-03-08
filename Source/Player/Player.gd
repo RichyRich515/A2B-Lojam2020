@@ -14,6 +14,7 @@ var isLookingLeft = false
 
 var keys = []
 onready var anim = get_node("AnimatedSprite")
+onready var anim2 = get_node("AnimatedSprite2")
 var isHurt = false
 var shakeDir = 1
 
@@ -27,6 +28,7 @@ func _process(delta):
 		isHurt = false
 	if isHurt:
 		$AnimatedSprite.self_modulate = Color(0.8,0,0)
+		$AnimatedSprite2.self_modulate = Color(0.8,0,0)
 		$Camera2D.offset.x += shakeDir * 200 * delta
 		if $Camera2D.offset.x > 3.5:
 			shakeDir = -1
@@ -35,6 +37,7 @@ func _process(delta):
 	else:
 		$Camera2D.offset.x = 0
 		$AnimatedSprite.self_modulate = Color(1,1,1)
+		$AnimatedSprite2.self_modulate = Color(1,1,1)
 
 
 func _physics_process(delta):
@@ -48,6 +51,7 @@ func _physics_process(delta):
 			scale.x *= -1
 		if(on_floor):
 			anim.play("MoveRight")
+			anim2.play("MoveRight")
 	elif Input.is_action_pressed("move_left"):
 		motion.x = max(motion.x - acceleration, -max_speed)
 		if(!isLookingLeft):
@@ -55,9 +59,11 @@ func _physics_process(delta):
 			scale.x *= -1
 		if(on_floor):
 			anim.play("MoveRight")
+			anim2.play("MoveRight")
 	else:
 		motion.x = 0
 		anim.play("Idle")
+		anim2.play("Idle")
 	
 	
 	if on_floor and Input.is_action_just_pressed("jump"):

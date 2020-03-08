@@ -15,7 +15,11 @@ func _process(delta):
 			$Player.collision_layer = 1
 			$Player.collision_mask = 1
 			$Player/Sounds/Switch_Light.play()
+			$Player/AnimatedSprite.show()
+			$Player/AnimatedSprite2.hide()
 		else:
 			$Player.collision_layer = 2
 			$Player.collision_mask = 2
 			$Player/Sounds/Switch_Dark.play()
+			$Player/AnimatedSprite.hide()
+			$Player/AnimatedSprite2.show()
