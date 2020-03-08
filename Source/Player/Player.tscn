@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/player_right1.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Player/Level end.wav" type="AudioStream" id=10]
 [ext_resource path="res://Player/Switch_Light.wav" type="AudioStream" id=11]
 [ext_resource path="res://Player/Switch_Dark.wav" type="AudioStream" id=12]
+[ext_resource path="res://Keys/red_key.png" type="Texture" id=13]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -47,8 +48,9 @@ current = true
 process_mode = 0
 limit_left = 0
 limit_top = 0
-limit_smoothed = true
-smoothing_enabled = true
+smoothing_speed = 2.5
+editor_draw_limits = true
+editor_draw_drag_margin = true
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.2
@@ -58,24 +60,38 @@ one_shot = true
 
 [node name="Jump" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 5 )
+volume_db = -10.0
 
 [node name="Land" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 6 )
+volume_db = -10.0
 
 [node name="Hit" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 7 )
+volume_db = -10.0
 
 [node name="Key Pickup" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 8 )
+volume_db = -10.0
 
 [node name="Door Open" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 9 )
+volume_db = -10.0
 
 [node name="Level Change" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 10 )
+volume_db = -10.0
 
 [node name="Switch_Light" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 11 )
+volume_db = -10.0
 
 [node name="Switch_Dark" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 12 )
+volume_db = -10.0
+
+[node name="Key" type="Sprite" parent="."]
+visible = false
+position = Vector2( 8, -8 )
+rotation = -1.57079
+texture = ExtResource( 13 )

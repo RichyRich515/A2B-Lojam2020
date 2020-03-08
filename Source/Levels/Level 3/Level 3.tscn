@@ -46,4 +46,4 @@ next_level = "res://Levels/Level 4/Level 4.tscn"
 position = Vector2( 335.366, 160.237 )
 
 [node name="Red Key" parent="." instance=ExtResource( 7 )]
-position = Vector2( 192, 256.215 )
+position = Vector2( 192, 256 )

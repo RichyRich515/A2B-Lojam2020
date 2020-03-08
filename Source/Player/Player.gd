@@ -75,12 +75,15 @@ func _physics_process(delta):
 func get_key(color):
 	keys.append(color)
 	$"Sounds/Key Pickup".play()
+	$Key.show()
 
 
 func remove_key(color):
 	if color in keys:
 		keys.remove(color)
 		$"Sounds/Door Open".play()
+		if keys.empty():
+			$Key.hide()
 		return true
 	else:
 		return false

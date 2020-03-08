@@ -2,10 +2,6 @@ extends Node2D
 
 var normal_world = true
 
-func _ready():
-	
-	pass
-
 func _process(delta):
 	if Input.is_action_just_pressed("switch_key"):
 		normal_world = !normal_world
@@ -23,4 +19,5 @@ func _process(delta):
 			$Player.collision_layer = 2
 			$Player.collision_mask = 2
 			$Player/Sounds/Switch_Dark.play()
+	
 	pass
