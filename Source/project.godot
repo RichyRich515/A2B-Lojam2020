@@ -15,10 +15,10 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Lojam2020"
+config/name="A2B"
 run/main_scene="res://Title.tscn"
 boot_splash/fullsize=false
-config/icon="res://icon.png"
+config/icon="res://Tilemap/greyBricks.png"
 
 [autoload]
 
@@ -93,4 +93,3 @@ exit={
 [rendering]
 
 environment/default_clear_color=Color( 0.729412, 0.729412, 0.729412, 1 )
-environment/default_environment="res://default_env.tres"
