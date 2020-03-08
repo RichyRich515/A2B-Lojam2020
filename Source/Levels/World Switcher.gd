@@ -18,7 +18,9 @@ func _process(delta):
 		if normal_world:
 			$Player.collision_layer = 1
 			$Player.collision_mask = 1
+			$Player/Sounds/Switch_Light.play()
 		else:
 			$Player.collision_layer = 2
 			$Player.collision_mask = 2
+			$Player/Sounds/Switch_Dark.play()
 	pass
