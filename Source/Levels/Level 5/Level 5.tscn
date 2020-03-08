@@ -73,7 +73,7 @@ position = Vector2( 336, 160 )
 
 [node name="LevelTransition" parent="." instance=ExtResource( 7 )]
 position = Vector2( 560, 175.828 )
-next_level = "res://Background/EndScene.tscn"
+next_level = "res://Levels/Level 6/Level 6.tscn"
 
 [node name="Lava" type="Node2D" parent="."]
 
