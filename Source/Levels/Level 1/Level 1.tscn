@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Levels/World Switcher.gd" type="Script" id=1]
 [ext_resource path="res://Background/Background Tileset.tres" type="TileSet" id=2]
@@ -7,7 +7,10 @@
 [ext_resource path="res://Spike/Spike.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Spike/SpikeHint.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Tilemap/DarkBlockHint.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Text/Change.png" type="Texture" id=8]
+[ext_resource path="res://Text/jump.png" type="Texture" id=9]
+[ext_resource path="res://Text/wasd.png" type="Texture" id=10]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=11]
 
 [node name="Level 1" type="Node2D"]
 script = ExtResource( 1 )
@@ -22,6 +25,7 @@ position = Vector2( 1200, 560 )
 next_level = "res://Levels/Level 2/Level 2.tscn"
 
 [node name="World1" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="Tilemap" type="TileMap" parent="World1"]
 tile_set = ExtResource( 4 )
@@ -48,6 +52,7 @@ position = Vector2( 656, 528 )
 position = Vector2( 688, 528 )
 
 [node name="World2" type="Node2D" parent="."]
+editor/display_folded = true
 visible = false
 
 [node name="Tilemap2" type="TileMap" parent="World2"]
@@ -100,7 +105,20 @@ position = Vector2( 848, 528 )
 [node name="SpikeHint6" parent="World2" instance=ExtResource( 6 )]
 position = Vector2( 880, 528 )
 
-[node name="Player" parent="." instance=ExtResource( 8 )]
+[node name="Change" type="Sprite" parent="."]
+position = Vector2( 238.469, 496.94 )
+z_as_relative = false
+texture = ExtResource( 8 )
+
+[node name="jump" type="Sprite" parent="Change"]
+position = Vector2( -84.3307, -33.6291 )
+texture = ExtResource( 9 )
+
+[node name="wasd" type="Sprite" parent="Change"]
+position = Vector2( -157.482, -15.5851 )
+texture = ExtResource( 10 )
+
+[node name="Player" parent="." instance=ExtResource( 11 )]
 position = Vector2( 48, 496 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
