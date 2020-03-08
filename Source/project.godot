@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Lojam2020"
-run/main_scene="res://Levels/Level 2/Level 2.tscn"
+run/main_scene="res://Levels/Level 1/Level 1.tscn"
 boot_splash/fullsize=false
 config/icon="res://icon.png"
 
