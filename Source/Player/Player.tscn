@@ -57,14 +57,15 @@ wait_time = 0.2
 one_shot = true
 
 [node name="Sounds" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="Jump" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 5 )
-volume_db = -10.0
+volume_db = -20.0
 
 [node name="Land" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 6 )
-volume_db = -10.0
+volume_db = -20.0
 
 [node name="Hit" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 7 )
@@ -80,7 +81,7 @@ volume_db = -10.0
 
 [node name="Level Change" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 10 )
-volume_db = -10.0
+volume_db = -20.0
 
 [node name="Switch_Light" type="AudioStreamPlayer" parent="Sounds"]
 stream = ExtResource( 11 )

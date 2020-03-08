@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://FadeInOut.gd" type="Script" id=1]
-[ext_resource path="res://Background/pressToStart.png" type="Texture" id=2]
+[ext_resource path="res://Background/BlackBox.png" type="Texture" id=2]
 
 [sub_resource type="Animation" id=1]
 resource_name = "fade"
@@ -38,6 +38,7 @@ script = ExtResource( 1 )
 modulate = Color( 1, 1, 1, 0 )
 scale = Vector2( 100, 100 )
 texture = ExtResource( 2 )
+centered = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/fade = SubResource( 1 )
