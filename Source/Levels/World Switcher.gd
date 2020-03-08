@@ -19,5 +19,3 @@ func _process(delta):
 			$Player.collision_layer = 2
 			$Player.collision_mask = 2
 			$Player/Sounds/Switch_Dark.play()
-	
-	pass

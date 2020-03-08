@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Title.gd" type="Script" id=1]
+[ext_resource path="res://Background/Title.gd" type="Script" id=1]
 [ext_resource path="res://Background/pressToStart.png" type="Texture" id=2]
 
 [node name="Title" type="Node2D"]
